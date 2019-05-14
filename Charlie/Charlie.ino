@@ -15,11 +15,11 @@
  *  Wiper to LCD VO pin (pin 3)
 */
 
-// Includes needed Libraries.
+/* Includes needed Libraries */
 #include <Servo.h>    // Servo library from Arduino.  
 #include <LiquidCrystal.h>  // The LCD Library. 
 
-// Declaration Pins. 
+/* Declaration Pins */
 int angle = 0;    // Sets the starting angle to 0 degrees. 
 int servoPin = 13;   // Makes the servo pin equal to pin 10.
 int redLight = 9;   // Makes the red LED pin 9
@@ -35,11 +35,11 @@ const int d5 = 4;    // Initializes the LCD Pins.
 const int d6 = 3;    // Initializes the LCD Pins. 
 const int d7 = 2;    // Initializes the LCD Pins.
 
-// Variables. 
+/* Variables */
 Servo feedingServo;   // This is the feeding variable used by the system. 
 LiquidCrystal lcd (rs, en, d4, d5, d6, d7);   // These are the LCD Pins. 
 
-// This is run the first time the project is started. 
+/* This is run the first time the project is started */
 void setup() 
 {
   Serial.begin(9600); // Allows the viewing of data from the Serial Monitor.
@@ -54,7 +54,7 @@ void setup()
   delay(2000);    // Waits a little for system and user. 
 }
 
-// This is run on a loop constantly by the system. 
+/* This is run on a loop constantly by the system.*/
 void loop() 
 {
   lcd.clear();   // Clears the LCD of any words.
@@ -158,7 +158,7 @@ void times()
 }
 
 
-// Turns on the Yellow Light.
+/* Turns on the Yellow Light */
 void yellow()
 {
   digitalWrite(redLight, LOW);  // Deactivates the red LED.
@@ -166,7 +166,7 @@ void yellow()
   digitalWrite(greenLight, LOW);  // Deactivates the green LED.
 }
 
-// Turns on the Red Light.
+/* Turns on the Red Light */
 void red()
 {
   digitalWrite(redLight, HIGH);  // Activates the red LED.
@@ -174,7 +174,7 @@ void red()
   digitalWrite(greenLight, LOW);  // Deactivates the green LED. 
 }
 
-// Turns on the Green Light. 
+/* Turns on the Green Light */
 void green()
 {
   digitalWrite(redLight, LOW);  // Deactivates the red LED.
@@ -182,7 +182,7 @@ void green()
   digitalWrite(greenLight, HIGH);  // Activates the green LED.
 }
 
-// Turns on all the lights.
+/* Turns on all the lights */
 void lightson()
 {
   digitalWrite(redLight, HIGH);  // Activates the red LED.
@@ -190,7 +190,7 @@ void lightson()
   digitalWrite(greenLight, HIGH);  // Activates the green LED.
 }
 
-// Turns off all the lights. 
+/* Turns off all the lights */
 void lightsoff()
 {
   digitalWrite(redLight, LOW);  // Deactivates the red LED.
